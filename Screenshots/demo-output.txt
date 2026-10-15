@@ -1,0 +1,58 @@
+DegenerationGuardKit demo: catch an LLM answer that has started repeating itself, while it streams
+
+[1] A looping answer, streamed through a DegenerationGate
+  output cap (scalars):      16384
+  found:                     verbatim: a 35-scalar block written 4 times in a row
+  detected at scalar:        181 (chunk 12 of 16 scalars)
+  read before stopping:      192
+  never generated:           16196 of 16388
+  kept for the user:         "To convert 3.2 km/h to m/s, divide by 3.6. Wait, let me reconsider the units."
+
+[2] Nine ways a model loops (policy .standard)
+  text                  kind             at/total   kept tail
+  sentence loop         verbatim p=35    170/452    ...Wait, let me reconsider the units.
+  token flood           verbatim p=4     213/493    ...The answer is the
+  newline flood         verbatim p=1     218/418    ...Here is the table:
+  three-statement cycle verbatim p=86    366/540    ...ser. Let me check the input again.
+  numbered loop         units m=1        139/337    ...:\n1. Check the configuration file.
+  spacing varies        units m=1        133/258    ...ot right. Hmm, that is  not right.
+  code line loop        units m=1        92/380     ...python\ntotal = 0\ntotal = total + 1
+  cjk loop              units m=1        66/144     ...让我们重新考虑一下这个问题。我需要再检查一遍计算结果。
+  long paragraph loop   units m=7        2697/2697  ...ightly longer sentence than usual.
+
+[3] Twelve answers that repeat on purpose
+  text                              .standard  .reasoning (digits masked)
+  times table                       clean      CUT at 83/253
+  poem with refrain                 clean      clean
+  song ending on a doubled chorus   clean      clean
+  markdown table                    clean      clean
+  swift switch                      clean      clean
+  empty checklist                   clean      clean
+  separator rule                    clean      clean
+  json records                      clean      CUT at 210/262
+  recipe steps                      clean      clean
+  price list                        clean      CUT at 69/140
+  ellipsis and emphasis             clean      clean
+  csv rows                          clean      CUT at 101/205
+
+[4] Against two common loop checks, on the same 21 texts
+  check                   loops caught  legitimate texts cut
+  five identical lines    2 of 9        1 of 12 (empty checklist)
+    missed: sentence loop, token flood, three-statement cycle, numbered loop, spacing varies, cjk loop, long paragraph loop
+  4-gram density > 0.5    6 of 9        1 of 12 (empty checklist)
+    missed: newline flood, numbered loop, cjk loop
+  DegenerationGuardKit    9 of 9        0 of 12
+
+[5] A numerical loop: the numbers change, the reasoning does not
+  text: "Find a factor. Let me check 17 times 3 equals 51. That is not it. Let me check 17 times 4 equ..."
+  .standard   clean
+  .reasoning  unit cycle: the same run of 2 sentences written 4 times in a row at 220; keeps "Find a factor. Let me check 17 times 3 equals 51. That is not it."
+
+[6] The chunking never changes the answer
+  21 texts x chunk sizes 1...64: 1344 of 1344 verdicts equal the whole-text verdict
+  sentence loop detected at scalar 170 for every size
+
+[7] Which model loops: a DegenerationLedger over 30 scripted answers
+  model-a: 1 of 10 answers looped (10%); verbatim 1, unit cycles 0, 1848 scalars read
+  model-b: 4 of 10 answers looped (40%); verbatim 0, unit cycles 4, 4467 scalars read
+  model-c: 0 of 10 answers looped (0%); verbatim 0, unit cycles 0, 2127 scalars read

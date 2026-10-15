@@ -1,0 +1,8 @@
+print("DegenerationGuardKit demo: catch an LLM answer that has started repeating itself, while it streams")
+await scenarioBill()
+scenarioKinds()
+scenarioLegitimate()
+scenarioBaselines()
+scenarioNumeric()
+scenarioChunking()
+await scenarioLedger()

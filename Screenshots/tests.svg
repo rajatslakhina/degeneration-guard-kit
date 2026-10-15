@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="588" viewBox="0 0 1000 588">
+<rect width="1000" height="588" rx="10" fill="#0d1117"/>
+<circle cx="20" cy="18" r="6" fill="#ff5f56"/><circle cx="40" cy="18" r="6" fill="#ffbd2e"/><circle cx="60" cy="18" r="6" fill="#27c93f"/>
+<text x="500.0" y="22" text-anchor="middle" font-family="Menlo,monospace" font-size="12" fill="#8b949e">DegenerationGuardKit&#160;quality&#160;gates</text>
+<text x="16" y="50" font-family="Menlo,monospace" font-size="11.5" fill="#79c0ff">$&#160;swift&#160;build&#160;&#160;&#160;(fresh&#160;scratch&#160;path)</text>
+<text x="16" y="68" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">Build&#160;complete!&#160;0&#160;warnings,&#160;0&#160;errors</text>
+<text x="16" y="86" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">&#160;</text>
+<text x="16" y="104" font-family="Menlo,monospace" font-size="11.5" fill="#79c0ff">$&#160;swift&#160;test&#160;--enable-code-coverage&#160;&#160;&#160;(5&#160;repeated&#160;runs)</text>
+<text x="16" y="122" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">Executed&#160;44&#160;tests,&#160;with&#160;0&#160;failures&#160;(0&#160;unexpected)&#160;-&#160;5&#160;of&#160;5&#160;runs&#160;green</text>
+<text x="16" y="140" font-family="Menlo,monospace" font-size="11.5" fill="#c9d1d9">&#160;&#160;CorpusTests&#160;8&#160;.&#160;GateTests&#160;4&#160;.&#160;MonitorTests&#160;8&#160;.&#160;ReferenceTests&#160;2</text>
+<text x="16" y="158" font-family="Menlo,monospace" font-size="11.5" fill="#c9d1d9">&#160;&#160;UnitKeyTests&#160;6&#160;.&#160;UnitTests&#160;8&#160;.&#160;VerbatimTests&#160;8</text>
+<text x="16" y="176" font-family="Menlo,monospace" font-size="11.5" fill="#c9d1d9">&#160;&#160;1344&#160;chunkings&#160;of&#160;21&#160;texts&#160;and&#160;600&#160;random&#160;texts&#160;checked&#160;against&#160;a&#160;brute-force&#160;reference</text>
+<text x="16" y="194" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">&#160;</text>
+<text x="16" y="212" font-family="Menlo,monospace" font-size="11.5" fill="#79c0ff">$&#160;xcrun&#160;llvm-cov&#160;report&#160;&#160;&#160;(library&#160;target)</text>
+<text x="16" y="230" font-family="Menlo,monospace" font-size="11.5" fill="#c9d1d9">File&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Regions&#160;&#160;&#160;Functions&#160;&#160;&#160;Lines</text>
+<text x="16" y="248" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">DegenerationFinding.swift&#160;&#160;&#160;&#160;&#160;100.00%&#160;&#160;&#160;100.00%&#160;&#160;&#160;&#160;&#160;100.00%</text>
+<text x="16" y="266" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">DegenerationGate.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;100.00%&#160;&#160;&#160;100.00%&#160;&#160;&#160;&#160;&#160;100.00%</text>
+<text x="16" y="284" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">DegenerationGuard.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;100.00%&#160;&#160;&#160;100.00%&#160;&#160;&#160;&#160;&#160;100.00%</text>
+<text x="16" y="302" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">DegenerationLedger.swift&#160;&#160;&#160;&#160;&#160;&#160;100.00%&#160;&#160;&#160;100.00%&#160;&#160;&#160;&#160;&#160;100.00%</text>
+<text x="16" y="320" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">DegenerationMonitor.swift&#160;&#160;&#160;&#160;&#160;100.00%&#160;&#160;&#160;100.00%&#160;&#160;&#160;&#160;&#160;100.00%</text>
+<text x="16" y="338" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">DegenerationPolicy.swift&#160;&#160;&#160;&#160;&#160;&#160;100.00%&#160;&#160;&#160;100.00%&#160;&#160;&#160;&#160;&#160;100.00%</text>
+<text x="16" y="356" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">ScalarHistory.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;100.00%&#160;&#160;&#160;100.00%&#160;&#160;&#160;&#160;&#160;100.00%</text>
+<text x="16" y="374" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">UnitCycleDetector.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;100.00%&#160;&#160;&#160;100.00%&#160;&#160;&#160;&#160;&#160;100.00%</text>
+<text x="16" y="392" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">UnitKey.swift&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;100.00%&#160;&#160;&#160;100.00%&#160;&#160;&#160;&#160;&#160;100.00%</text>
+<text x="16" y="410" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">VerbatimLoopDetector.swift&#160;&#160;&#160;&#160;100.00%&#160;&#160;&#160;100.00%&#160;&#160;&#160;&#160;&#160;100.00%</text>
+<text x="16" y="428" font-family="Menlo,monospace" font-size="11.5" fill="#c9d1d9">TOTAL&#160;&#160;191&#160;regions,&#160;81&#160;functions,&#160;334&#160;lines:&#160;100.00%&#160;/&#160;100.00%&#160;/&#160;100.00%</text>
+<text x="16" y="446" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">&#160;</text>
+<text x="16" y="464" font-family="Menlo,monospace" font-size="11.5" fill="#79c0ff">$&#160;swiftlint&#160;lint&#160;--strict&#160;&#160;&#160;(SwiftLint&#160;0.63.2)</text>
+<text x="16" y="482" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">Done&#160;linting!&#160;Found&#160;0&#160;violations,&#160;0&#160;serious&#160;in&#160;18&#160;files.</text>
+<text x="16" y="500" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">&#160;</text>
+<text x="16" y="518" font-family="Menlo,monospace" font-size="11.5" fill="#79c0ff">$&#160;mutation&#160;checks&#160;&#160;&#160;(each&#160;guard&#160;removed&#160;in&#160;a&#160;scratch&#160;copy)</text>
+<text x="16" y="536" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">no&#160;primitive-period&#160;rule:&#160;15&#160;failures&#160;.&#160;no&#160;cut&#160;alignment:&#160;4&#160;.&#160;list&#160;number&#160;splits&#160;a&#160;unit:&#160;1</text>
+<text x="16" y="554" font-family="Menlo,monospace" font-size="11.5" fill="#7ee787">no&#160;list-marker&#160;stripping:&#160;11&#160;.&#160;three&#160;copies&#160;instead&#160;of&#160;four:&#160;12&#160;.&#160;no&#160;lazy&#160;run&#160;reset:&#160;crash</text>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="540" viewBox="0 0 1000 540">
+<rect width="1000" height="540" rx="10" fill="#0d1117"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8b949e"/></marker></defs>
+<text x="500" y="30" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="bold" fill="#e6edf3">DegenerationGuardKit&#160;&#8212;&#160;stop&#160;paying&#160;for&#160;an&#160;answer&#160;that&#160;is&#160;repeating&#160;itself</text>
+<g font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#c9d1d9">
+<rect x="20" y="60" width="190" height="170" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="115" y="82" text-anchor="middle" font-weight="bold" fill="#79c0ff">Provider&#160;stream</text>
+<text x="34" y="106">text&#160;fragments,&#160;any&#160;size</text>
+<text x="34" y="125">from&#160;ProviderGatewayKit,</text>
+<text x="34" y="144">OpenRouter&#160;or&#160;any&#160;SSE</text>
+<text x="34" y="163"></text>
+<text x="34" y="182" fill="#8b949e">offsets&#160;count&#160;Unicode</text>
+<text x="34" y="201" fill="#8b949e">scalars,&#160;so&#160;a&#160;chunk</text>
+<text x="34" y="220" fill="#8b949e">boundary&#160;moves&#160;nothing</text>
+<rect x="250" y="60" width="250" height="170" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="375" y="82" text-anchor="middle" font-weight="bold" fill="#79c0ff">DegenerationGate&#160;(actor)</text>
+<text x="264" y="106">ingest(chunk)&#160;-&gt;&#160;StreamDecision</text>
+<text x="264" y="125">&#160;&#160;.proceed&#160;&#160;&#160;keep&#160;reading</text>
+<text x="264" y="144">&#160;&#160;.stop(f)&#160;&#160;&#160;cancel&#160;the&#160;stream</text>
+<text x="264" y="163">finish()&#160;-&gt;&#160;DegenerationVerdict</text>
+<text x="264" y="182">reports&#160;once&#160;to&#160;the&#160;ledger</text>
+<text x="264" y="201" fill="#8b949e"></text>
+<text x="264" y="220" fill="#8b949e">wraps&#160;a&#160;DegenerationMonitor</text>
+<rect x="540" y="60" width="440" height="170" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="760" y="82" text-anchor="middle" font-weight="bold" fill="#79c0ff">DegenerationMonitor&#160;(value&#160;type)</text>
+<text x="554" y="106">feeds&#160;every&#160;scalar&#160;to&#160;each&#160;LoopDetector,&#160;in&#160;order</text>
+<text x="554" y="125">first&#160;finding&#160;is&#160;final;&#160;later&#160;text&#160;is&#160;counted&#160;only</text>
+<text x="554" y="144" fill="#8b949e"></text>
+<text x="554" y="163">VerbatimLoopDetector&#160;&#160;ends&#160;in&#160;4&#160;copies&#160;of&#160;one&#160;block</text>
+<text x="554" y="182" fill="#8b949e">&#160;&#160;&#160;(&lt;=&#160;512&#160;scalars;&#160;120+&#160;covered,&#160;200+&#160;if&#160;block&#160;&lt;&#160;8)</text>
+<text x="554" y="201">UnitCycleDetector&#160;&#160;&#160;&#160;&#160;ends&#160;in&#160;4&#160;copies&#160;of&#160;1-8&#160;sentences</text>
+<text x="554" y="220" fill="#8b949e">&#160;&#160;&#160;(normalized:&#160;case,&#160;spacing,&#160;list&#160;markers,&#160;digits?)</text>
+<rect x="20" y="290" width="300" height="200" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="170" y="312" text-anchor="middle" font-weight="bold" fill="#ffa657">DegenerationLedger&#160;(actor)</text>
+<text x="34" y="336">record(model:verdict:scanned:)</text>
+<text x="34" y="355">entry(for:&#160;model)</text>
+<text x="34" y="374">&#160;&#160;streams,&#160;verbatimLoops,&#160;unitCycles,</text>
+<text x="34" y="393">&#160;&#160;customLoops,&#160;scannedScalars,</text>
+<text x="34" y="412">&#160;&#160;loops,&#160;loopRate</text>
+<text x="34" y="431">models,&#160;total</text>
+<text x="34" y="450"></text>
+<text x="34" y="469" fill="#8b949e">which&#160;model&#160;loops,&#160;and&#160;how&#160;often</text>
+<rect x="360" y="290" width="300" height="200" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="510" y="312" text-anchor="middle" font-weight="bold" fill="#d2a8ff">DegenerationFinding</text>
+<text x="374" y="336">kind&#160;&#160;.verbatim(period,&#160;copies)</text>
+<text x="374" y="355">&#160;&#160;&#160;&#160;&#160;&#160;.unitCycle(units,&#160;copies)</text>
+<text x="374" y="374">&#160;&#160;&#160;&#160;&#160;&#160;.custom(name)</text>
+<text x="374" y="393">detectedAt&#160;&#160;&#160;scalars&#160;read&#160;when&#160;it&#160;fired</text>
+<text x="374" y="412">loopStart&#160;&#160;&#160;&#160;first&#160;copy</text>
+<text x="374" y="431">keepThrough&#160;&#160;second&#160;copy,&#160;aligned&#160;to&#160;a</text>
+<text x="374" y="450">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;sentence&#160;end,&#160;then&#160;a&#160;word&#160;end</text>
+<rect x="700" y="290" width="280" height="200" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="840" y="312" text-anchor="middle" font-weight="bold" fill="#7ee787">DegenerationGuard</text>
+<text x="714" y="336">check(text,&#160;policy)&#160;-&gt;&#160;verdict</text>
+<text x="714" y="355">salvage(text,&#160;keeping:&#160;f)&#160;-&gt;&#160;Salvage</text>
+<text x="714" y="374">&#160;&#160;text&#160;before&#160;the&#160;second&#160;copy,</text>
+<text x="714" y="393">&#160;&#160;trailing&#160;whitespace&#160;removed</text>
+<text x="714" y="412" fill="#8b949e"></text>
+<text x="714" y="431">DegenerationPolicy</text>
+<text x="714" y="450">&#160;&#160;.standard&#160;&#160;&#160;digits&#160;as&#160;written</text>
+<text x="714" y="469">&#160;&#160;.reasoning&#160;&#160;digits&#160;masked</text>
+<line x1="210" y1="145" x2="248" y2="145" stroke="#8b949e" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="500" y1="145" x2="538" y2="145" stroke="#8b949e" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="330" y1="232" x2="200" y2="288" stroke="#8b949e" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="272" y="268" fill="#8b949e" font-size="11">finish()</text>
+<line x1="700" y1="232" x2="560" y2="288" stroke="#8b949e" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="642" y="268" fill="#8b949e" font-size="11">finding</text>
+<line x1="662" y1="390" x2="698" y2="390" stroke="#8b949e" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="500" y="522" text-anchor="middle" fill="#8b949e" font-size="11">Not&#160;caught:&#160;loops&#160;that&#160;reword&#160;themselves&#160;each&#160;time&#160;(semantic&#160;loops)&#160;and&#160;blocks&#160;longer&#160;than&#160;512&#160;scalars&#160;that&#160;also&#160;span&#160;more&#160;than&#160;8&#160;sentences.</text>
+</g></svg>
